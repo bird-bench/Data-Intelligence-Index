@@ -14,7 +14,7 @@ Presented by <img src="materials/bird_fig_main.png" alt="BIRD" width="20" style=
   <em>Initial ranking of some leading models. See the <a href="https://livesqlbench.ai/data-intelligence-index/dashboard">Dashboard</a> for full results.</em>
 </p>
 
-> All models and benchmarks are evaluated in the End-to-End prompting-based way. The Index averages representative scores across all aspects equally. When aspects include multiple sub-benchmarks, an instance-weighted average is computed to reflect each benchmark's relative size.
+> All models and benchmarks are evaluated in an End-to-End prompting-based way, and we are actively extending the harness. The Index averages representative scores across all aspects equally. When aspects include multiple sub-benchmarks, an instance-weighted average is computed to reflect each benchmark's relative size.
 
 ## Why Data Intelligence Index?
 
