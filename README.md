@@ -1,10 +1,10 @@
 # Data Intelligence Index <img src="materials/hku-logo.jpg" alt="HKU" width="36" style="vertical-align: middle;"/>  <img src="materials/bird_fig_main.png" alt="BIRD" width="36" style="vertical-align: middle; position: relative; top: -3px;"/>
 
-[![Homepage](https://img.shields.io/badge/Homepage-livesqlbench.ai-blue)](https://livesqlbench.ai/data-intelligence-index/)
+[![Blog](https://img.shields.io/badge/Blog-Data%20Intelligence%20Index-blue)](https://livesqlbench.ai/data-intelligence-index/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-Live%20Leaderboard-green)](https://livesqlbench.ai/data-intelligence-index/dashboard)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A comprehensive evaluation of frontier AI models on data-centric challenges, from DB querying and BI analysis to application debugging, human-centric interaction, digital, data science, and more.
+A comprehensive evaluation of frontier AI models on data-centric challenges, from DB querying and BI analysis to application debugging, human-centric interaction, digital, data science, and more. See our **[blog](https://livesqlbench.ai/data-intelligence-index/)** for more details.
 
 Presented by <img src="materials/bird_fig_main.png" alt="BIRD" width="20" style="vertical-align: middle;"/> [HKU BIRD Team](https://bird-bench.github.io/)
 
@@ -42,6 +42,8 @@ The **Data Intelligence Index** is our attempt to measure the data intelligence 
 | **More ...**                   | Stay tuned!        |                                                             |
 
 > If you'd like your benchmark or model to be included, please let us know via [bird.bench25@gmail.com](mailto:bird.bench25@gmail.com).
+
+See our **[blog](https://livesqlbench.ai/data-intelligence-index/)** for more details, including the motivations, evaluation aspects, index calculation methodology, findings and the interactive dashboard.
 
 
 ## Benchmark Overview: Evaluation Suite and Datasets
@@ -144,4 +146,3 @@ booktitle={The Thirty-ninth Annual Conference on Neural Information Processing S
 year={2025}
 }
 ```
-
