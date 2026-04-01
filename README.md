@@ -46,6 +46,7 @@ The **Data Intelligence Index** is our attempt to measure the data intelligence 
 
 ## Benchmark Overview: Evaluation Suite and Datasets
 
+You could find the evaluation suite and datasets of each benchmark in the following table.
 
 | Aspect                         | Benchmark                                                     | Subset                                                                       | Instances | Language / SQL Dialect                |
 | ------------------------------ | ------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------- | ------------------------------------- |
@@ -90,6 +91,11 @@ If you'd like a benchmark or model to be included, please let us know via [bird.
 
 
 
+## Stay Tuned!
+
+We are working on the following:
+
+- [ ] **A unified evaluation suite** for all benchmarks and models for easy benchmarking and comparison.
 
 ## Citation
 
