@@ -1,0 +1,607 @@
+{
+ "name": "DII v1.0 Muscle public set",
+ "n_tasks": 200,
+ "note": "The 200 published DII v1.0 Muscle tasks and their benchmark. 300 more tasks are held out as a hidden test set.",
+ "tasks": {
+  "critic-mysql-47": {
+   "bench": "critic"
+  },
+  "critic-mysql-50": {
+   "bench": "critic"
+  },
+  "critic-mysql-94": {
+   "bench": "critic"
+  },
+  "critic-oracle-13": {
+   "bench": "critic"
+  },
+  "critic-oracle-31": {
+   "bench": "critic"
+  },
+  "critic-oracle-35": {
+   "bench": "critic"
+  },
+  "critic-oracle-37": {
+   "bench": "critic"
+  },
+  "critic-oracle-38": {
+   "bench": "critic"
+  },
+  "critic-oracle-41": {
+   "bench": "critic"
+  },
+  "critic-oracle-50": {
+   "bench": "critic"
+  },
+  "critic-oracle-56": {
+   "bench": "critic"
+  },
+  "critic-oracle-76": {
+   "bench": "critic"
+  },
+  "critic-postgresql-24": {
+   "bench": "critic"
+  },
+  "critic-postgresql-290": {
+   "bench": "critic"
+  },
+  "critic-sqlite-164": {
+   "bench": "critic"
+  },
+  "critic-sqlite-272": {
+   "bench": "critic"
+  },
+  "critic-sqlite-274": {
+   "bench": "critic"
+  },
+  "critic-sqlite-407": {
+   "bench": "critic"
+  },
+  "critic-sqlite-419": {
+   "bench": "critic"
+  },
+  "critic-sqlite-432": {
+   "bench": "critic"
+  },
+  "critic-sqlserver-10": {
+   "bench": "critic"
+  },
+  "critic-sqlserver-17": {
+   "bench": "critic"
+  },
+  "critic-sqlserver-22": {
+   "bench": "critic"
+  },
+  "critic-sqlserver-34": {
+   "bench": "critic"
+  },
+  "critic-sqlserver-70": {
+   "bench": "critic"
+  },
+  "critic-sqlserver-71": {
+   "bench": "critic"
+  },
+  "critic-sqlserver-85": {
+   "bench": "critic"
+  },
+  "critic-sqlserver-86": {
+   "bench": "critic"
+  },
+  "critic15-apache--airflow-pr-60804": {
+   "bench": "critic15"
+  },
+  "critic15-bird-lite-bitbagcommerce--syliuselasticsearchplugin-210": {
+   "bench": "critic15"
+  },
+  "critic15-bird-lite-shopware--shopware-12101": {
+   "bench": "critic15"
+  },
+  "critic15-bird-lite-shopware--shopware-12510": {
+   "bench": "critic15"
+  },
+  "critic15-bird-lite-shopware--shopware-12979": {
+   "bench": "critic15"
+  },
+  "critic15-bird-lite-shopware--shopware-13146": {
+   "bench": "critic15"
+  },
+  "critic15-bird-lite-shopware--shopware-14356": {
+   "bench": "critic15"
+  },
+  "critic15-bird-lite-shopware--shopware-15488": {
+   "bench": "critic15"
+  },
+  "critic15-bird-lite-shopware--shopware-15711": {
+   "bench": "critic15"
+  },
+  "critic15-bird-lite-sylius--sylius-17973": {
+   "bench": "critic15"
+  },
+  "critic15-bird-lite-sylius--sylius-18630": {
+   "bench": "critic15"
+  },
+  "critic15-cal.diy-pr-14685": {
+   "bench": "critic15"
+  },
+  "critic15-cal.diy-pr-21250": {
+   "bench": "critic15"
+  },
+  "critic15-discourse-pr-37063": {
+   "bench": "critic15"
+  },
+  "critic15-frappe--hrms-557": {
+   "bench": "critic15"
+  },
+  "critic15-frappe--hrms-944": {
+   "bench": "critic15"
+  },
+  "critic15-lending-frappe--lending-875": {
+   "bench": "critic15"
+  },
+  "critic15-netbox-community--netbox-pr-22401": {
+   "bench": "critic15"
+  },
+  "critic15-strapi--strapi-23129": {
+   "bench": "critic15"
+  },
+  "critic15-strapi--strapi-23577": {
+   "bench": "critic15"
+  },
+  "critic15-strapi--strapi-24316": {
+   "bench": "critic15"
+  },
+  "critic15-strapi--strapi-25292": {
+   "bench": "critic15"
+  },
+  "dare-class-if-710f2dd66a09": {
+   "bench": "dare"
+  },
+  "dare-class-mm-710f2dd66a09": {
+   "bench": "dare"
+  },
+  "dare-class-mm-935ca09985b6": {
+   "bench": "dare"
+  },
+  "dare-class-mm-b751dd72e883": {
+   "bench": "dare"
+  },
+  "dare-class-mm-c4bc400411e0": {
+   "bench": "dare"
+  },
+  "dare-class-mm-d46075c7d999": {
+   "bench": "dare"
+  },
+  "dare-class-mm-d62a26a46fef": {
+   "bench": "dare"
+  },
+  "dare-reg-if-3aee9ad65106": {
+   "bench": "dare"
+  },
+  "dare-reg-if-808ab0cd336f": {
+   "bench": "dare"
+  },
+  "dare-reg-if-b980369df5f9": {
+   "bench": "dare"
+  },
+  "dare-reg-mm-b980369df5f9": {
+   "bench": "dare"
+  },
+  "dare-reg-mm-c4d040fdff36": {
+   "bench": "dare"
+  },
+  "dare-reg-mm-cc2cdeb4cc82": {
+   "bench": "dare"
+  },
+  "dare-reg-mm-eb1eee2fa4e6": {
+   "bench": "dare"
+  },
+  "dare-ts-cf-09385ca8d078": {
+   "bench": "dare"
+  },
+  "dare-ts-cf-cb9733bc8510": {
+   "bench": "dare"
+  },
+  "dare-ts-cf-ebfa561e81bd": {
+   "bench": "dare"
+  },
+  "dsct-anomaly_detection-anomaly_detection_00-impl-a-to-impl-b": {
+   "bench": "dsct"
+  },
+  "dsct-anomaly_detection-anomaly_detection_05-impl-b-to-impl-a": {
+   "bench": "dsct"
+  },
+  "dsct-classification-classification_02-impl-b-to-impl-a": {
+   "bench": "dsct"
+  },
+  "dsct-classification-classification_03-impl-a-to-impl-b": {
+   "bench": "dsct"
+  },
+  "dsct-classification-classification_07-impl-a-to-impl-b": {
+   "bench": "dsct"
+  },
+  "dsct-classification-classification_11-impl-a-to-impl-b": {
+   "bench": "dsct"
+  },
+  "dsct-classification-classification_12-impl-a-to-impl-b": {
+   "bench": "dsct"
+  },
+  "dsct-classification-classification_12-impl-b-to-impl-a": {
+   "bench": "dsct"
+  },
+  "dsct-classification-classification_15-impl-a-to-impl-b": {
+   "bench": "dsct"
+  },
+  "dsct-clustering-clustering_00-impl-a-to-impl-b": {
+   "bench": "dsct"
+  },
+  "dsct-dimensionality_reduction-dimensionality_reduction_01-impl-a-to-impl-b": {
+   "bench": "dsct"
+  },
+  "dsct-dimensionality_reduction-dimensionality_reduction_01-impl-b-to-impl-a": {
+   "bench": "dsct"
+  },
+  "dsct-recommendation-recommendation_00-impl-a-to-impl-b": {
+   "bench": "dsct"
+  },
+  "dsct-recommendation-recommendation_00-impl-b-to-impl-a": {
+   "bench": "dsct"
+  },
+  "effisql-65037320": {
+   "bench": "effisql"
+  },
+  "effisql-65169293": {
+   "bench": "effisql"
+  },
+  "effisql-66371249": {
+   "bench": "effisql"
+  },
+  "effisql-66529816": {
+   "bench": "effisql"
+  },
+  "effisql-68085793": {
+   "bench": "effisql"
+  },
+  "effisql-68214224": {
+   "bench": "effisql"
+  },
+  "effisql-69413760": {
+   "bench": "effisql"
+  },
+  "effisql-70064973": {
+   "bench": "effisql"
+  },
+  "effisql-70271225": {
+   "bench": "effisql"
+  },
+  "effisql-71491344": {
+   "bench": "effisql"
+  },
+  "effisql-71733405": {
+   "bench": "effisql"
+  },
+  "effisql-74636130": {
+   "bench": "effisql"
+  },
+  "effisql-74775446": {
+   "bench": "effisql"
+  },
+  "effisql-76010546": {
+   "bench": "effisql"
+  },
+  "effisql-76090734": {
+   "bench": "effisql"
+  },
+  "effisql-76422044": {
+   "bench": "effisql"
+  },
+  "effisql-78763074": {
+   "bench": "effisql"
+  },
+  "interact-credit-6": {
+   "bench": "interact"
+  },
+  "interact-credit-m-3": {
+   "bench": "interact"
+  },
+  "interact-cross-db-5": {
+   "bench": "interact"
+  },
+  "interact-cybermarket-m-2": {
+   "bench": "interact"
+  },
+  "interact-disaster-2": {
+   "bench": "interact"
+  },
+  "interact-disaster-8": {
+   "bench": "interact"
+  },
+  "interact-fake-m-1": {
+   "bench": "interact"
+  },
+  "interact-insider-3": {
+   "bench": "interact"
+  },
+  "interact-insider-4": {
+   "bench": "interact"
+  },
+  "interact-insider-5": {
+   "bench": "interact"
+  },
+  "interact-museum-m-4": {
+   "bench": "interact"
+  },
+  "interact-polar-3": {
+   "bench": "interact"
+  },
+  "interact-polar-m-5": {
+   "bench": "interact"
+  },
+  "interact-robot-3": {
+   "bench": "interact"
+  },
+  "interact-robot-9": {
+   "bench": "interact"
+  },
+  "interact-robot-m-5": {
+   "bench": "interact"
+  },
+  "interact-solar-6": {
+   "bench": "interact"
+  },
+  "interact-solar-7": {
+   "bench": "interact"
+  },
+  "interact-vaccine-8": {
+   "bench": "interact"
+  },
+  "interact-virtual-3": {
+   "bench": "interact"
+  },
+  "interact-virtual-m-1": {
+   "bench": "interact"
+  },
+  "livesqlbench-archeology-scan-1": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-archeology-scan-3": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-cross-border-m-1": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-cybermarket-pattern-10": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-disaster-relief-10": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-exchange-traded-funds-16": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-exchange-traded-funds-m-3": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-labor-certification-applications-10": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-labor-certification-applications-m-2": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-mental-healths-11": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-museum-artifact-8": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-museum-artifact-m-2": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-polar-equipment-12": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-residential-data-1": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-robot-fault-prediction-6": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-solar-panel-6": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-solar-panel-8": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-solar-panel-m-1": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-sports-events-m-4": {
+   "bench": "livesqlbench"
+  },
+  "livesqlbench-virtual-idol-m-1": {
+   "bench": "livesqlbench"
+  },
+  "minidev-mysql-001": {
+   "bench": "minidev"
+  },
+  "minidev-mysql-005": {
+   "bench": "minidev"
+  },
+  "minidev-mysql-082": {
+   "bench": "minidev"
+  },
+  "minidev-mysql-135": {
+   "bench": "minidev"
+  },
+  "minidev-mysql-146": {
+   "bench": "minidev"
+  },
+  "minidev-mysql-216": {
+   "bench": "minidev"
+  },
+  "minidev-mysql-249": {
+   "bench": "minidev"
+  },
+  "minidev-mysql-263": {
+   "bench": "minidev"
+  },
+  "minidev-mysql-309": {
+   "bench": "minidev"
+  },
+  "minidev-mysql-320": {
+   "bench": "minidev"
+  },
+  "minidev-mysql-370": {
+   "bench": "minidev"
+  },
+  "minidev-mysql-489": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-001": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-005": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-082": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-135": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-146": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-149": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-216": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-249": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-263": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-320": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-370": {
+   "bench": "minidev"
+  },
+  "minidev-postgresql-489": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-001": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-005": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-082": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-135": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-146": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-149": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-216": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-249": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-263": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-320": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-370": {
+   "bench": "minidev"
+  },
+  "minidev-sqlite-489": {
+   "bench": "minidev"
+  },
+  "workspace-en-100": {
+   "bench": "workspace"
+  },
+  "workspace-en-116": {
+   "bench": "workspace"
+  },
+  "workspace-en-152": {
+   "bench": "workspace"
+  },
+  "workspace-en-154": {
+   "bench": "workspace"
+  },
+  "workspace-en-160": {
+   "bench": "workspace"
+  },
+  "workspace-en-161": {
+   "bench": "workspace"
+  },
+  "workspace-en-207": {
+   "bench": "workspace"
+  },
+  "workspace-en-224": {
+   "bench": "workspace"
+  },
+  "workspace-en-23": {
+   "bench": "workspace"
+  },
+  "workspace-en-242": {
+   "bench": "workspace"
+  },
+  "workspace-en-255": {
+   "bench": "workspace"
+  },
+  "workspace-en-286": {
+   "bench": "workspace"
+  },
+  "workspace-en-311": {
+   "bench": "workspace"
+  },
+  "workspace-en-314": {
+   "bench": "workspace"
+  },
+  "workspace-en-328": {
+   "bench": "workspace"
+  },
+  "workspace-en-334": {
+   "bench": "workspace"
+  },
+  "workspace-en-372": {
+   "bench": "workspace"
+  },
+  "workspace-en-374": {
+   "bench": "workspace"
+  },
+  "workspace-en-388": {
+   "bench": "workspace"
+  },
+  "workspace-en-44": {
+   "bench": "workspace"
+  },
+  "workspace-en-45": {
+   "bench": "workspace"
+  },
+  "workspace-en-55": {
+   "bench": "workspace"
+  },
+  "workspace-en-75": {
+   "bench": "workspace"
+  },
+  "workspace-en-79": {
+   "bench": "workspace"
+  },
+  "workspace-en-95": {
+   "bench": "workspace"
+  }
+ }
+}

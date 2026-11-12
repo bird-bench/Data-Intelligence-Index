@@ -1,0 +1,28 @@
+[project]
+name = "dii-harbor"
+version = "1.0.0"
+description = "Run and score the Data Intelligence Index (DII) v1.0 Muscle tasks with Harbor"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = [
+    "harbor==0.23.0",
+    "mini-swe-agent==2.4.6",
+    "python-dotenv>=1.0",
+    "pyyaml>=6.0",
+    "requests>=2.31",
+]
+
+[project.urls]
+Homepage = "https://livesqlbench.ai/data-intelligence-index/"
+Repository = "https://github.com/bird-bench/Data-Intelligence-Index"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["dii_harbor*"]
+
+[tool.setuptools.package-data]
+dii_harbor = ["data/*.json"]

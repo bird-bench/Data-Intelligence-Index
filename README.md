@@ -1,148 +1,145 @@
-# Data Intelligence Index <img src="materials/hku-logo.jpg" alt="HKU" width="36" style="vertical-align: middle;"/>  <img src="materials/bird_fig_main.png" alt="BIRD" width="36" style="vertical-align: middle; position: relative; top: -3px;"/>
+# Data Intelligence Index (DII) v1.0 <img src="materials/hku-logo.jpg" alt="HKU" width="36" style="vertical-align: middle;"/>  <img src="materials/bird_fig_main.png" alt="BIRD" width="36" style="vertical-align: middle; position: relative; top: -3px;"/>
 
 [![Blog](https://img.shields.io/badge/Blog-Data%20Intelligence%20Index-blue)](https://livesqlbench.ai/data-intelligence-index/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-Live%20Leaderboard-green)](https://livesqlbench.ai/data-intelligence-index/dashboard)
+[![Harbor](https://img.shields.io/badge/Harbor%20Hub-dii--v1--muscle-purple)](https://hub.harborframework.com/datasets/birdsql/dii-v1-muscle)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-dii--v1--muscle-orange)](https://huggingface.co/datasets/birdsql/dii-v1-muscle)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A comprehensive evaluation of frontier AI models on data-centric challenges, from DB querying and BI analysis to application debugging, human-centric interaction, digital, data science, and more. See our **[blog](https://livesqlbench.ai/data-intelligence-index/)** for more details.
+DII v1.0 Muscle is a compact, challenging benchmark for data agents: **500 hard data tasks from 9
+benchmarks**, covering database question answering, database analysis and operations, DB application
+debugging, user interaction, data science, query optimization and computer use. Each task is a sandboxed
+[Harbor](https://harborframework.com) environment with real databases, code and files, and is scored by
+the original benchmark's checks. Plug in any agent: mini-swe-agent, Claude Code, Codex CLI or your own.
 
-Presented by <img src="materials/bird_fig_main.png" alt="BIRD" width="20" style="vertical-align: middle;"/> [HKU BIRD Team](https://bird-bench.github.io/)
+**200 tasks are public** on [Harbor Hub](https://hub.harborframework.com/datasets/birdsql/dii-v1-muscle)
+and [Hugging Face](https://huggingface.co/datasets/birdsql/dii-v1-muscle). **300 tasks are held out** as
+a hidden test set, so models can be compared on tasks that are not published. Both halves rank the models almost the same way: of the 12
+models scored, only the last two swap places. To have your model scored on the hidden tasks, email
+[bird.bench25@gmail.com](mailto:bird.bench25@gmail.com).
 
-<p align="center">
-  <img src="materials/index_ranking.png" alt="Data Intelligence Index Ranking" width="860"/>
-  <br/>
-  <em>Initial ranking of some leading models. See the <a href="https://livesqlbench.ai/data-intelligence-index/dashboard">Dashboard</a> for full results.</em>
-</p>
+Muscle is the hard part of DII v1. A larger, broader **Overall** set will follow; it uses the same code
+here, with more tasks.
 
-> All models and benchmarks are evaluated in an End-to-End prompting-based way, and we are actively extending the harness. The Index averages representative scores across all aspects equally. When aspects include multiple sub-benchmarks, an instance-weighted average is computed to reflect each benchmark's relative size.
+Presented by <img src="materials/bird_fig_main.png" alt="BIRD" width="20" style="vertical-align: middle;"/> [the BIRD Team](https://bird-bench.github.io/) (HKU).
 
-## Why Data Intelligence Index?
+## What is in DII v1.0 Muscle
 
-Most Models and Agents evaluations focus on general reasoning, coding, or chat quality, but **real data work is harder and more diverse**: it spans querying, Business Intelligence (BI) analysis, DB operations (CRUD), debugging, multi-turn interaction, multi-modal querying, data science, and more aspects. 
+| Category | Benchmark | What the agent does | Public tasks |
+|---|---|---|---:|
+| Database Question Answering | [BIRD Mini-Dev](https://github.com/bird-bench/mini_dev) | Answer a question with SQL on SQLite, PostgreSQL or MySQL | 36 |
+| Database Analysis & Operations | [LiveSQLBench](https://github.com/bird-bench/livesqlbench) | Analyze and change business data (SELECT, UPDATE, CREATE, DELETE) using business documents | 20 |
+| DB Application Debugging | [BIRD-Critic](https://github.com/bird-bench/BIRD-CRITIC-1) | Find and fix a broken SQL query from a user's issue | 28 |
+| | [BIRD-Critic 1.5: SWE](https://bird-critic.github.io/bird-critic-15/) | Fix database-related bugs in real application code bases | 22 |
+| Human-centric Interaction | [BIRD-Interact](https://github.com/bird-bench/BIRD-Interact) | Work with a simulated user over several turns: ask, clarify, then query or change the database | 21 |
+| Data Science | [DS-CodeTrans](https://arxiv.org/pdf/2609.30749) | Translate a whole data-science project between implementations so its outputs still match | 14 |
+| | [DARE-Bench](https://github.com/Snowflake-Labs/dare-bench) | Build a machine-learning model on Kaggle-style data and submit predictions | 17 |
+| Query Optimization | [Effi-SQL](https://huggingface.co/datasets/birdsql/Effi-SQL) | Rewrite a slow query so it returns the same rows faster | 17 |
+| Computer-Use | [Workspace-Bench](https://github.com/OpenDataBox/Workspace-Bench) | Produce reports, spreadsheets and documents from a large personal workspace of files | 25 |
+| | | **Total public** | **200** |
 
+The other **300 tasks** form the hidden test set. They come from the same 9 benchmarks.
 
-<p align="center">
-  <img src="materials/data-centric-tasks.png" alt="Data-Centric Tasks" width="380"/>
-  <br/>
-  <em>Various aspects of data-centric intelligence involved in real-world data work.</em>
-</p>
+## Scores
 
-The **Data Intelligence Index** is our attempt to measure the data intelligence comprehensively. We evaluate frontier AI models across various distinct aspects of data-centric intelligence, using multiple benchmarks developed by the HKU BIRD Team over the past three years, including:
+All 500 tasks (public and hidden), reference agent setup. Index and category scores are out of 100.
+Per-benchmark scores are on the [dashboard](https://livesqlbench.ai/data-intelligence-index/dashboard).
 
+| # | Model | Index | DB QA | DB Analysis & Ops | App Debug | Human-centric | Data Science | Query Opt. | Computer-Use |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | Claude Opus 5.5 (max) | **71.2** | 80.0 | 60.8 | 68.4 | 85.2 | 70.4 | 79.8 | 54.1 |
+| 2 | GPT-6 Astra (max) | **70.4** | 73.0 | 70.6 | 70.0 | 68.7 | 79.3 | 77.6 | 53.3 |
+| 3 | GPT-6.1 Sol (high) | **66.2** | 64.4 | 68.6 | 65.6 | 66.9 | 74.5 | 71.3 | 51.9 |
+| 4 | GPT-5.6 Sol (xhigh) | **62.0** | 66.7 | 68.8 | 65.6 | 43.5 | 66.0 | 75.0 | 48.2 |
+| 5 | GPT-5.6 Sol (high) | **60.9** | 65.6 | 66.7 | 66.1 | 42.9 | 63.9 | 73.8 | 47.6 |
+| 6 | DeepSeek V4.1 Flash (max) | **59.3** | 64.4 | 58.8 | 59.8 | 57.1 | 52.2 | 72.5 | 50.0 |
+| 7 | GPT-5.6 Sol (medium) | **58.7** | 64.4 | 68.6 | 60.8 | 41.9 | 60.0 | 70.6 | 44.2 |
+| 8 | GLM-5.3 (max) | **55.6** | 62.2 | 49.0 | 52.6 | 48.6 | 59.1 | 67.7 | 49.7 |
+| 9 | GPT-5.6 Sol (low) | **51.9** | 65.6 | 52.9 | 52.4 | 40.6 | 52.0 | 62.8 | 36.9 |
+| 10 | Qwen 3.8 Max (max) | **50.9** | 58.4 | 47.1 | 51.1 | 41.5 | 49.0 | 64.0 | 45.3 |
+| 11 | GPT-5.6 Luna (high) | **49.8** | 50.6 | 54.9 | 52.9 | 32.1 | 53.6 | 61.2 | 43.1 |
+| 12 | GLM-5.3 Flash (max) | **49.5** | 57.8 | 49.0 | 53.4 | 44.4 | 41.2 | 48.8 | 51.9 |
 
-| Aspect                         | Benchmark     | What It Tests                                              |
-| ------------------------------ | ------------- | ---------------------------------------------------------- |
-| **DB Querying**                | BIRD-SQL      | SQL translation from natural language                      |
-| **BI Analysis & Manipulation** | LiveSQLBench  | BI analysis and Full database operations (CRUD)            |
-| **DB App Debugging**           | BIRD-Critic   | Production application SQL issue diagnosis and repair      |
-| **Human-centric Interaction**  | BIRD-Interact | Multi-turn agentic interactions with databases env. and user             |
-| **Data Science**               | DS-CodeTrans  | Data science pipelines (e.g. DS code translation)                |
-| **Digital**                    | BIRD-Vision        | Multi-modal reasoning combining images and structured data |
-| **Efficiency**                 | SQL Optimization   | Query performance optimization (indexing, execution plans)  |
-| **More ...**                   | Stay tuned!        |                                                             |
+**How the index is computed.** Each task gets a score from 0 to 1: pass or fail for most benchmarks,
+a partial score for DARE-Bench and Workspace-Bench, and a speed-up tier for Effi-SQL
+(1 for at least 2x faster, 0.75 for 1.2x, 0.5 for 1x, 0.25 for 0.5x, and 0 if the rows differ or the
+query is slower than 0.5x).
+A benchmark's score is the mean over its tasks (x100). A category's score is the average of its
+benchmark scores (DB Application Debugging: BIRD-Critic and BIRD-Critic 1.5; Data Science: DS-CodeTrans
+and DARE-Bench; the other five categories have one benchmark each). **The index is the plain average
+of the 7 category scores.** Tasks that failed for infrastructure reasons (for example Docker errors, or a grader
+that could not run) are left out and should be rerun; a run that hits the time limit still counts. See [`dii_harbor/score.py`](dii_harbor/score.py).
 
-> If you'd like your benchmark or model to be included, please let us know via [bird.bench25@gmail.com](mailto:bird.bench25@gmail.com).
+## Running the tasks
 
-See our **[blog](https://livesqlbench.ai/data-intelligence-index/)** for more details, including the motivations, evaluation aspects, index calculation methodology, findings and the interactive dashboard.
+```bash
+git clone https://github.com/bird-bench/Data-Intelligence-Index.git
+cd Data-Intelligence-Index
+python3.12 -m venv .venv && source .venv/bin/activate
+python -m pip install .
+cp .env.example .env    # add your API keys
 
+python -m dii_harbor.run --model openai/gpt-6-astra --jobs-dir jobs/astra
+python -m dii_harbor.score --run astra=jobs/astra
+```
 
-## Benchmark Overview: Evaluation Suite and Datasets
+The runner takes the 200 public tasks from Harbor Hub and uses the DII v1.0 Muscle settings by default.
+[docs/running.md](docs/running.md) has the details: keys, choosing tasks, settings and other agents.
 
-You could find the evaluation suite and datasets of each benchmark in the following table.
+You will need Docker on an x86 Linux machine (Docker Desktop on Apple silicon runs most tasks under
+emulation, with limits listed in [docs/running.md](docs/running.md#macos)), Python 3.12+, enough free disk
+for the task images (Workspace-Bench and BIRD-Critic 1.5 images are the largest), and an OpenAI API key: Interact
+tasks use it for the simulated user and Workspace tasks use it for the judge (both `openai/gpt-6-luna`),
+whatever model you test.
 
-| Aspect                         | Benchmark                                                     | Subset                                                                       | Instances | Language / SQL Dialect                |
-| ------------------------------ | ------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------- | ------------------------------------- |
-| **DB Querying**                | [BIRD-SQL (Mini Dev)](https://github.com/bird-bench/mini_dev) | [SQLite](https://huggingface.co/datasets/birdsql/bird_mini_dev)              | 500       | SQLite                                |
-|                                |                                                               | [PostgreSQL](https://huggingface.co/datasets/birdsql/bird_mini_dev)          | 500       | PostgreSQL                            |
-|                                |                                                               | [MySQL](https://huggingface.co/datasets/birdsql/bird_mini_dev)               | 500       | MySQL                                 |
-|                                |                                                               | **Total**                                                                    | **1,500** |                                       |
-| **BI Analysis & Manipulation** | [LiveSQLBench](https://github.com/bird-bench/livesqlbench)    | [Lite](https://huggingface.co/datasets/birdsql/livesqlbench-base-lite)       | 270       | PostgreSQL                            |
-|                                |                                                               | [Full v1](https://huggingface.co/datasets/birdsql/livesqlbench-base-full-v1) | 600       | PostgreSQL                            |
-|                                |                                                               | [Large v1](https://huggingface.co/datasets/birdsql/livesqlbench-large-v1)    | 480       | PostgreSQL                            |
-|                                |                                                               | **Total**                                                                    | **1,350** |                                       |
-| **DB App Debugging**           | [BIRD-Critic](https://github.com/bird-bench/BIRD-CRITIC-1)    | [SQLite](https://huggingface.co/datasets/birdsql/bird-critic-1.0-sqlite)     | 500       | SQLite                                |
-|                                |                                                               | [Flash](https://huggingface.co/datasets/birdsql/bird-critic-1.0-flash-exp)   | 200       | SQLite                                |
-|                                |                                                               | [PG-530](https://huggingface.co/datasets/birdsql/bird-critic-1.0-postgresql) | 530       | PostgreSQL                            |
-|                                |                                                               | [Open](https://huggingface.co/datasets/birdsql/bird-critic-1.0-open)         | 570       | Mixed (PG, MySQL, SQL Server, Oracle) |
-|                                |                                                               | **Total**                                                                    | **1,800** |                                       |
-|                                | BIRD-Critic 1.5: SWE *(coming soon)*                          |                                                                              |           |                                       |
-| **Human-centric Interaction**  | [BIRD-Interact](https://github.com/bird-bench/BIRD-Interact)  | [Lite](https://huggingface.co/datasets/birdsql/bird-interact-lite)           | 300       | PostgreSQL                            |
-|                                |                                                               | [Full](https://huggingface.co/datasets/birdsql/bird-interact-full)           | 600       | PostgreSQL                            |
-|                                |                                                               | [Mini-Interact](https://huggingface.co/datasets/birdsql/mini-interact)       | 300       | SQLite                                |
-|                                |                                                               | **Total**                                                                    | **1,200** |                                       |
-|                                | Tapilot-Crossing *(coming soon)*                              |                                                                              |           |                                       |
-| **Data Science**               | DS-CodeTrans *(coming soon)*                                  | Data Querying                                                                | 300       | Python, PostgreSQL                    |
-|                                |                                                               | Data Management                                                              | 300       | Python                                |
-|                                |                                                               | Deep Learning                                                                | 200       | Python                                |
-|                                |                                                               | **Total**                                                                    | **800**   |                                       |
-| **Digital**                    | BIRD-Vision *(coming soon)*                                   | Life Track                                                                   | 300       | SQLite + image input                  |
-|                                |                                                               | Science Track                                                                | 300       | SQLite + image input                  |
-|                                |                                                               | **Total**                                                                    | **600**   |                                       |
-| **Efficiency**                 | SQL Optimization *(coming soon)*                              |                                                                              |           |                                       |
-|                                |                                                               | **Grand Total**                                                              | **7,250** |                                       |
+## The reference agent setup
 
+All DII v1.0 Muscle scores use the same simple agent, so the index compares models rather than agent
+frameworks:
 
-**How the Data Intelligence Index is calculated**: Each aspect's representative score is a sample-weighted average of its subsets. The Data Intelligence Index is the unweighted average across all aspects.
+- [mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent) 2.4.6 with a bash tool and a short
+  system prompt (see [`dii_harbor/run.py`](dii_harbor/run.py)).
+- At most 300 model calls and 3600 seconds per task, 180 seconds per command, 16,384 output tokens per
+  model call (thinking included). Workspace-Bench tasks use 65,536, because a cut-off reply breaks a
+  Workspace task; this is the same for every model.
+- The task container has no Internet access. The agent loop runs on the host, calls the model API, and
+  sends each command into the container.
 
+**About the reply-length cap.** Today's scores cap each model reply at 16,384 tokens, the same for every
+model. The exception is Workspace-Bench: its tasks use 65,536 for every model, because a cut-off reply
+breaks a Workspace task. The 16,384 cap is stricter than usual Harbor practice. Because a
+model's thinking counts against it, it cuts off Claude's replies far more often than GPT's. The next
+version will use 64k or no cap for all models.
 
-## Contributing and Contact
+## Hidden test set
 
-We welcome contributions from the community to push the frontier of data intelligence together. If you have any questions or suggestions, please feel free to contact us!
+The 300 hidden tasks are not published. To have a model evaluated on them, or to add your model or
+benchmark to the index, write to [bird.bench25@gmail.com](mailto:bird.bench25@gmail.com). As models
+improve, we retire tasks that get easy and add harder ones.
 
-If you'd like a benchmark or model to be included, please let us know via [bird.bench25@gmail.com](mailto:bird.bench25@gmail.com).
+Some hidden tasks are adapted from benchmarks whose original data is public (for example BIRD
+Mini-Dev), so holding them out lowers, but does not remove, the chance that a model has seen them.
 
+## Earlier version
 
-
-## Stay Tuned!
-
-We are working on the following:
-
-- [ ] **A unified evaluation suite** for all benchmarks and models for easy benchmarking and comparison.
+DII v0 (April 2026) used prompt-only evaluation on the original benchmarks. Its description and
+benchmark links are kept in [docs/v0.md](docs/v0.md).
 
 ## Citation
 
-If you find this work useful, please cite:
-
-BIRD-SQL:
-```
-@article{li2024can,
-  title={Can llm already serve as a database interface? a big bench for large-scale database grounded text-to-sqls},
-  author={Li, Jinyang and Hui, Binyuan and Qu, Ge and Yang, Jiaxi and Li, Binhua and Li, Bowen and Wang, Bailin and Qin, Bowen and Geng, Ruiying and Huo, Nan and others},
-  journal={Advances in Neural Information Processing Systems},
-  volume={36},
-  year={2024}
+```bibtex
+@misc{dii2026,
+  title        = {Data Intelligence Index (DII) v1.0},
+  author       = {{HKU BIRD Team}},
+  year         = {2026},
+  howpublished = {\url{https://github.com/bird-bench/Data-Intelligence-Index}}
 }
 ```
 
-LiveSQLBench:
-```
-@misc{livesqlbench2025,
-  author       = {BIRD Team},
-  title        = {LiveSQLBench: A Dynamic and Contamination-Free Benchmark for Evaluating LLMs on Real-World Text-to-SQL Tasks},
-  year         = {2025},
-  howpublished = {https://github.com/bird-bench/livesqlbench},
-  note         = {Accessed: 2025-05-22}
-}
-```
+Please also cite the benchmarks you use; each one's page is linked in the table above.
 
-BIRD-Interact:
-```
-@inproceedings{
-huo2026birdinteract,
-title={{BIRD}-{INTERACT}: Re-imagining Text-to-{SQL} Evaluation via Lens of Dynamic Interactions},
-author={Nan Huo and Xiaohan Xu and Jinyang Li and Per Jacobsson and Shipei Lin and Bowen Qin and Binyuan Hui and Xiaolong Li and Ge Qu and Shuzheng Si and Linheng Han and Edward Alexander and Xintong Zhu and Rui Qin and Ruihan Yu and Yiyao Jin and Feige Zhou and Weihao Zhong and Yun Chen and Hongyu Liu and Chenhao Ma and Fatma Ozcan and Yannis Papakonstantinou and Reynold Cheng},
-booktitle={The Fourteenth International Conference on Learning Representations},
-year={2026}
-}
-```
+## License
 
-BIRD-Critic:
-```
-@inproceedings{
-li2025swesql,
-title={{SWE}-{SQL}: Illuminating {LLM} Pathways to Solve User {SQL} Issues in Real-World Applications},
-author={Jinyang Li and Xiaolong Li and Ge Qu and Per Jacobsson and Bowen Qin and Binyuan Hui and Shuzheng Si and Nan Huo and Xiaohan Xu and Yue Zhang and Ziwei Tang and Yuanshuai Li and Florensia Widjaja and Xintong Zhu and Feige Zhou and Yongfeng Huang and Yannis Papakonstantinou and Fatma Ozcan and Chenhao Ma and Reynold Cheng},
-booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
-year={2025}
-}
-```
+The code in this repository is MIT licensed. Each task keeps the license of the benchmark it comes
+from. DARE-Bench (Shu et al.) and Workspace-Bench (Tang et al.) are by other groups; their tasks list
+their authors, and we thank them for their work.
